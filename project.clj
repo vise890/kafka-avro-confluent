@@ -19,4 +19,9 @@
 
   :repositories {"confluent" "http://packages.confluent.io/maven"}
 
-  :profiles {:dev {:dependencies   [[vise890/zookareg "0.5.6"]]}})
+  :profiles {:dev {:dependencies [[vise890/zookareg "0.5.6"]]}
+             :ci  {:deploy-repositories
+                   [["clojars" {:url           "https://clojars.org/repo"
+                                :username      :env
+                                :password      :env
+                                :sign-releases false}]]}})
