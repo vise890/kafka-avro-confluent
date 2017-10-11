@@ -17,6 +17,9 @@
                  [org.apache.kafka/kafka-clients "0.10.2.1"
                   :exclusions [org.scala-lang/scala-library]]]
 
+  :aot [kafka-avro-confluent.serializers
+        kafka-avro-confluent.deserializers]
+
   :repositories {"confluent" "http://packages.confluent.io/maven"}
 
   :profiles {:dev {:dependencies [[vise890/zookareg "0.5.6"]]}
